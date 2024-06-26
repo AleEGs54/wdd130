@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+:root {
+    --primary-color: #004052;
+    --secondary-color: #3FA7D6;
+    --accent1-color: #FFFFFF;
+    --accent2-color: #28B715;
+
+    --heading-font: 'Raleway', sans-serif;
+    --paragraph-font: 'Montserrat', sans-serif;
+
+    --nav-background-color: #004052;
+    --nav-link-color: #FFFFFF;
+    --nav-hover-link-color: #e7ebda;
+    --nav-hover-background-color: #012029;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin: 15px;
+}
+
+h1{
+    position: absolute;
+    top: 30px;
+    left: 35%;
+    background-color: var(--accent1-color);
+}
+
+article {
+    position: absolute;
+    background-color: rgba(225, 146, 0, 0.4);
+    top: 45%;
+    left: 30px;
+    width: 90%;
+    height: auto;
+    font-size: medium;
+
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--primary-color);
+    margin: 15px;
+}
+
+
+article img {
+    float: right;
+    width: 200px;
+    height: auto;
+    margin: 10px
+}
+
+article p{
+    color: var(--accent1-color);
+}
+
+nav {
+    position: relative;
+}
+
+a {
+    margin: 5px;
+    color: #012029;
+}
+
+/* Removing the underline from the link */
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
+.hero {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.bgimg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section img {
+    display: block;
+}
