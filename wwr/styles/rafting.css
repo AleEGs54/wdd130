@@ -20,7 +20,59 @@
     --nav-hover-link-color: #e7ebda;
     --nav-hover-background-color: #012029;
 }
+/*HEADER*/
+header {
+    display: grid;
+    max-width: 80%;
+    background-color: var(--primary-color);
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center; /*To horizontally center the items*/
+    align-items: center; /*To vertically center the items*/
+    margin: 0 auto; /*To center the div*/
+    grid-auto-rows: minmax(125px, auto);
 
+}
+
+.hero {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#navigation-bar {
+    margin: 5px;
+    grid-column: 2/4;
+    grid-auto-rows: minmax(10px, auto);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navigation-bar li {
+    flex: 1 1 100%;
+
+}
+
+#navigation-bar a {
+    color: var(--nav-background-color);
+    width: 9em;
+    padding: 2px 10px;
+    border: 2px solid black;
+    font-family: var(--paragraph-font);
+    background-color: var(--accent1-color);
+    text-align: center;
+    
+}
+
+.logo {
+    max-width: 7.5em;
+    height: auto;
+}
+
+/*BODY*/
+/*Hero*/
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -34,21 +86,10 @@ h1{
     background-color: var(--accent1-color);
 }
 
-article {
-    position: absolute;
-    background-color: rgba(225, 146, 0, 0.4);
-    top: 45%;
-    left: 30px;
-    width: 90%;
+.bgimg {
+    display: block;
+    width: 100%;
     height: auto;
-    font-size: medium;
-
-}
-
-p {
-    font-family: var(--paragraph-font);
-    color: var(--primary-color);
-    margin: 15px;
 }
 
 
@@ -63,36 +104,99 @@ article p{
     color: var(--accent1-color);
 }
 
-nav {
+article {
+    position: absolute;
+    background-color: rgba(225, 146, 0, 0.4);
+    top: 45%;
+    left: 30px;
+    width: 90%;
+    height: auto;
+    font-size: medium;
+
+}
+
+
+/*History*/
+.history {
+    display: grid;
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--primary-color);
+    margin: 15px;
+}
+
+/*Adventure*/
+
+.adventures {
+    /* this covers the entire "adventures" section */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.adventures figure {
+    /* dividing figure into 2 rows and placing as many columns as possible */
+    display: grid;
+    grid-template-rows: 1fr 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: right;
+    align-items: center;
+}
+
+figure figcaption {
+    /* placing the captions below the images */
+    grid-row: 2/3; 
+    justify-self: center;
+}
+
+.adventures h2 {
+    /* placing the h2 in the middle on top of the image */
+    grid-column: 1/6;
+    grid-row: 1 ;
+    justify-self: center;
+}
+
+figure img {
+    /* styling the images */
+    max-width: 200px;
+    grid-row: 1/2;
+    margin: 10px;
+}
+
+
+
+/*FOOTER*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     position: relative;
 }
 
-a {
-    margin: 5px;
-    color: #012029;
+footer p {
+    text-align: center;
+    margin: 0;
+    flex: 1;
 }
 
-/* Removing the underline from the link */
-a:link {text-decoration: none;}
-a:visited {text-decoration: none;}
-a:hover {text-decoration: none;}
-a:active {text-decoration: none;}
-
-.hero {
-    position: relative;
-    width: 80%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
+.navigation-bar-bottom {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 10px;
 }
 
-
-.bgimg {
-    display: block;
-    width: 100%;
+.navigation-bar-bottom a img {
+    width: 20px;
     height: auto;
 }
 
-section img {
-    display: block;
+/* Removing the underline from the img link */
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
 }
