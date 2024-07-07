@@ -119,12 +119,37 @@ article {
 /*History*/
 .history {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    margin: 10px 0;
 }
 
-p {
+.history h2 {
+    align-self: center;
+    justify-self: center;
+    grid-column: 2/3;
+    margin-top: 1em;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.history p {
+    display: grid;
     font-family: var(--paragraph-font);
     color: var(--primary-color);
     margin: 15px;
+    grid-column: 1/4;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.history img {
+    width: 80%;
+    height: auto;
+    grid-column: 2/3;
+
+
 }
 
 /*Adventure*/
@@ -158,6 +183,8 @@ figure figcaption {
     grid-column: 1/6;
     grid-row: 1 ;
     justify-self: center;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 figure img {
@@ -172,27 +199,29 @@ figure img {
 /*FOOTER*/
 footer {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 10px;
-    position: relative;
     height: 4em;
+    border-top: 2px solid var(--primary-color);
 }
 
 footer p {
+    /* the copyright text */
     text-align: center;
     margin: 0;
     flex: 1;
 }
 
 .navigation-bar-bottom {
+    /* the nav that contains the three links */
     display: flex;
     gap: 10px;
-    position: absolute;
     right: 10px;
+    
 }
 
-.navigation-bar-bottom a img {
+.navigation-bar-bottom a img { 
+    /* The links */
     width: 20px;
     height: auto;
 }
