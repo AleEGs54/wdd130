@@ -176,6 +176,7 @@ footer {
     align-items: center;
     padding: 10px;
     position: relative;
+    height: 4em;
 }
 
 footer p {
