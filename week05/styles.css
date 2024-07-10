@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --heading-font: Raleway;
+    --paragraph-font: Montserrat;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    font-size: 1.2em;
+}
+
+header {
+    text-align: center;
+    color: darkblue;
+}
+
+form {
+    width: 35em;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: .5rem ;
+    background-color: #e7e7e7;
+    display: grid;
+}
+
+fieldset {
+    display: grid;
+    gap: .5rem;
+    margin: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+legend {
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    color: darkblue;
+}
+
+label,
+input,
+button,
+select, textarea {
+    font-family: var(--paragraph-font);
+}
+
+label{
+    text-align: right;
+    padding-right: 1rem;
+}
+
+input, select, textarea {
+    padding: .5rem;
+    font-size: 1.1rem;
+}
+
+input[type="checkbox"]{
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: bottom;
+}
+
+button{
+    width: 10em;
+    height: 3em;
+    border-radius: .5rem;
+    background-color: darkblue;
+    color: #fff;
+    font-size: medium;
+    justify-self: center;
+}
+
+button:hover{
+    color: darkblue;
+    background-color: #fff;
+}
+
+footer{
+    border-top: 2px solid black;
+    margin: 1em auto 0;
+    font-size: .8em;
+    width: 650px;
+    text-align: center;
+}
+
+.form-item {
+    display: grid;
+    align-items: center;
+}
+
+.column1 {
+    grid-template-columns: 3fr 1fr;
+}
+
+.column2 {
+    grid-template-columns:  1fr 2fr;
+}
