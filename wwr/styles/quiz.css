@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --primary-font: "Playfair Display";
+    --code-font: "Source Code Pro"
+}
+
+body{
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    width: 35em;
+    height: 35em;
+    margin: 0px auto 0;
+    border: 1px solid rgb(0,0,0);
+    background-color: rgb(223, 223, 223);
+    border-radius: .5rem;
+    
+}
+
+fieldset{
+    /* Taking off the border */
+    display: grid;
+    border: 0; 
+    gap: 1em;
+}
+
+div {
+    /* border: 1px solid black; */
+    display: grid;
+
+}
+
+input,
+select, textarea {
+    font-family: var(--primary-font);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    width: 28em;
+    justify-self: center;
+}
+
+label {
+    color: darkblue;
+    font-size: larger;
+    margin: 10px;
+}
+
+p {
+    display: inline;
+    padding: .5em;
+    color: black;
+    font-size: medium;
+}
+
+.declaration {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    margin: 0 auto 0;
+    padding: 10px 20px;
+    width: 18em;
+    height: 1.1em;
+    font-size: small;
+    font-family: var(--code-font);
+
+}
+
+input[type="number"]{
+    margin-top: 15px;
+}
+
+button{
+    margin: 0 auto 0;
+    width: 30em;
+    height: 3em;
+    border-radius: .5rem;
+    background-color: darkblue;
+    color: white;
+    border: 0;
+    align-self: center;
+}

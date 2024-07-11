@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 130 | HTML Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+    <meta name="description" content="A form">
+    <meta name="author" content="Alejandro Esteves">
+</head>
+<body>
+    <header>
+        <h1>Basic HTML and CSS Quiz</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <!-- here comes the quiz information, excluding the submit button -->
+                <div>
+                    <label for="q1">1.<p>What does the acronym CSS stand for?</p></label>
+                    <input type="text" name="q1" id="q1">
+                </div>
+                <div>
+                    <label for="q2">2.<p>How are id and class attributes selected in CSS</p></label>
+                    <textarea name="q2" id="q2"></textarea>
+                </div>
+                <div>
+                    <label for="q3">3.<p>Which of the following is a valid CSS comment?</p></label>
+                    <select name="q3" id="q3">
+                        <option value="" selected disabled>Choose an option</option>
+                        <option value="comment1">/*This is a comment*/</option>
+                        <option value="wrong-comment1">/This is a CSS comment/</option>
+                        <option value="wrong-comment2"><code>&lt;!-- Comments go here! --&gt;</code></option>
+                    </select>
+                </div>
+                <div>
+                    <label for="q4">4.<p>What is the bottom margin given this declaration?</p></label>
+                    <div class="declaration">margin: 10px 5px 15px</div>
+                    <input type="number" name="q4" id="q4">
+                </div>
+            </fieldset>
+            <button>Submit Quiz</button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
