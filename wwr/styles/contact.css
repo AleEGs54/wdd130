@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+:root {
+    --primary-color: #004052;
+    --secondary-color: #3FA7D6;
+    --accent1-color: #FFFFFF;
+    --accent2-color: #28B715;
+
+    --heading-font: 'Raleway', sans-serif;
+    --paragraph-font: 'Montserrat', sans-serif;
+
+    --nav-background-color: #004052;
+    --nav-link-color: #FFFFFF;
+    --nav-hover-link-color: #e7ebda;
+    --nav-hover-background-color: #012029;
+}
+/*HEADER*/
+header {
+    display: grid;
+    max-width: 100%;
+    background-color: var(--primary-color);
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center; /*To horizontally center the items*/
+    align-items: center; /*To vertically center the items*/
+    margin: 0 auto; /*To center the div*/
+    grid-auto-rows: minmax(125px, auto);
+
+}
+
+.hero {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#navigation-bar {
+    margin: 5px;
+    grid-column: 2/4;
+    grid-auto-rows: minmax(10px, auto);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navigation-bar li {
+    flex: 1 1 100%;
+
+}
+
+#navigation-bar a {
+    color: var(--nav-background-color);
+    width: 9em;
+    padding: 2px 10px;
+    border: 2px solid black;
+    font-family: var(--paragraph-font);
+    background-color: var(--accent1-color);
+    text-align: center;
+    
+}
+
+.logo {
+    max-width: 7.5em;
+    height: auto;
+}
+
+/*BODY*/
+/* section 1 */
+h1, h2 {
+    font-family: var(--heading-font);
+}
+
+p, a {
+    font-family: var(--paragraph-font);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.reach-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr 2fr;
+    justify-items: center;
+}
+
+h1 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    font-size: xx-large;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+p {
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+
+.sales-artcl, .text-artcl {
+    width: 40em;
+    box-sizing: border-box;
+    border: 5px solid var(--secondary-color);
+    text-align: center;
+    border-radius: .5em;
+}
+
+.sales-artcl{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.text-artcl {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.sales-artcl div, .text-artcl div {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.text-artcl div {
+    padding: 20px;
+    width: 10em;
+    justify-content: center;
+    border-radius: .5em;
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+}
+
+.phone-logo{
+    width: 50px;
+}
+
+hr {
+    border: 0; /* Elimina el borde por defecto */
+    height: 2px; /* Define el grosor de la línea */
+    background-color: #333; /* Define el color de la línea */
+    width: 100%; /* Asegura que la línea ocupe todo el ancho de la página */
+}
+
+ /* --hover, activations and more...-- */
+
+ #start-chat:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+
+ .text-artcl a:visited{
+    color: white;
+}
+
+.sales-artcl a:visited{
+    color: var(--primary-color);
+}
+
+/* section 2 - Headquarters */
+.headquarters {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+    background-color: var(--nav-background-color);
+    margin-top: 30px;
+}
+
+.contact{
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: repeat(5, .7fr) 2fr;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: var(--paragraph-font);
+    color: white;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin: 20px 0 35px 0;
+}
+
+.social-media-icons, .ways-to-contact {
+    display: inline-flex;
+    margin: 0 10px;
+    padding-left: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ways-to-contact p {
+    margin-left: 15px;
+
+}
+/* styling and giving a size to all the icons under the contacts section */
+.ways-to-contact img, .social-media-icons img {
+    width: 45px;
+    height: 40px;
+}
+
+.map {
+    grid-column: 2/3;
+    width: 95%;
+    height: 95%;
+    box-sizing: border-box;
+    justify-self: center;
+    align-self: center;
+    margin: 10px;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Section 3 - Meet our leadership */
+
+.leadership{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 13em 1fr;
+    border: 1px solid black;
+    justify-items: center;
+}
+
+.leadership h2 {
+    font-size: 4em;
+    grid-column: 1/4;
+}
+
+.leadership img {
+    width: 15em;
+    height: auto;
+    align-items: center;
+}
+
+.leaders {
+    text-align: center;
+}
+
+#david-thompson {
+    grid-column: 1/2;
+}
+#jessica-collins {
+    grid-column: 2/3;
+}
+#michale-ramirez {
+    grid-column: 3/4;
+}
+
+/* section 4 - form-section */
+.form-section {
+    background-color: var(--nav-background-color);
+    border: 1px solid black;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+fieldset h2, fieldset p{
+    grid-row: 1/2;
+}
+fieldset {
+    border: 1px solid #28B715;
+    grid-row: 2/3;
+}
+
+
+
+/*FOOTER*/
+footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 4em;
+    border-top: 2px solid var(--primary-color);
+    margin-top: 10px;
+}
+
+footer p {
+    /* the copyright text */
+    text-align: center;
+    margin: 0;
+    flex: 1;
+}
+
+.navigation-bar-bottom {
+    /* the nav that contains the three links */
+    display: flex;
+    gap: 10px;
+    
+}
+
+.navigation-bar-bottom a img { 
+    /* The links */
+    width: 20px;
+    height: auto;
+}
+
+/* Removing the underline from the img link */
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
