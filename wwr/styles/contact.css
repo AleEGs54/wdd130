@@ -58,8 +58,8 @@ header {
 #navigation-bar a {
     color: var(--nav-background-color);
     width: 9em;
-    padding: 2px 10px;
-    border: 2px solid black;
+    padding: 1px 10px;
+    border: 1px solid black;
     font-family: var(--paragraph-font);
     background-color: var(--accent1-color);
     text-align: center;
@@ -148,7 +148,7 @@ p {
 
 hr {
     border: 0; /* Elimina el borde por defecto */
-    height: 2px; /* Define el grosor de la línea */
+    height: 1px; /* Define el grosor de la línea */
     background-color: #333; /* Define el color de la línea */
     width: 100%; /* Asegura que la línea ocupe todo el ancho de la página */
 }
@@ -289,7 +289,7 @@ label, input, textarea, button {
 
 input, textarea, button {
     border-radius: .5em;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 form{
@@ -395,12 +395,12 @@ button{
 button:hover {
     background-color: var(--primary-color);
     color: var(--accent1-color);
-    border: 2px solid var(--accent1-color);
+    border: 1px solid var(--accent1-color);
 }
 
 button:active {
     background-color: var(--accent1-color);
-    border: 2px solid black;
+    border: 1px solid black;
     color: black;
 }
 
@@ -410,7 +410,7 @@ footer {
     align-items: center;
     padding: 10px;
     height: 4em;
-    border-top: 2px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
     margin-top: 10px;
 }
 
