@@ -39,7 +39,6 @@ header {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 
@@ -73,129 +72,346 @@ header {
 }
 
 /*BODY*/
-/*Hero*/
+/* section 1 */
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
-    margin: 15px;
 }
 
-h1{
-    position: absolute;
-    top: 30px;
-    left: 35%;
-    background-color: var(--accent1-color);
-    border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+p, a {
+    font-family: var(--paragraph-font);
 }
 
-.bgimg {
-    display: block;
-    width: 100%;
-    height: auto;
+body {
+    padding: 0;
+    margin: 0;
 }
 
-
-article img {
-    float: right;
-    width: 200px;
-    height: auto;
-    margin: 10px
+.reach-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
-article p{
+h1 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+    font-size: xx-large;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+p {
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+
+.sales-artcl, .text-artcl {
+    width: 40em;
+    box-sizing: border-box;
+    border: 5px solid var(--secondary-color);
+    text-align: center;
+    border-radius: .5em;
+}
+
+.sales-artcl{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.text-artcl {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.sales-artcl div, .text-artcl div {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.text-artcl div {
+    padding: 20px;
+    width: 10em;
+    justify-content: center;
+    border-radius: .5em;
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
     color: var(--accent1-color);
 }
 
-article {
-    position: absolute;
-    background-color: rgba(225, 146, 0, 0.6);
-    top: 45%;
-    left: 30px;
-    width: 90%;
-    height: auto;
-    font-size: medium;
-
+.phone-logo{
+    width: 50px;
 }
 
-
-/*History*/
-.history {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 1fr;
-    margin: 10px 0;
+hr {
+    border: 0; /* Elimina el borde por defecto */
+    height: 1px; /* Define el grosor de la línea */
+    background-color: #333; /* Define el color de la línea */
+    width: 100%; /* Asegura que la línea ocupe todo el ancho de la página */
 }
 
-.history h2 {
-    align-self: center;
-    justify-self: center;
-    grid-column: 2/3;
-    margin-top: 1em;
-    border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-}
+ /* --hover, activations and more...-- */
 
-.history p {
-    display: grid;
-    font-family: var(--paragraph-font);
+ #start-chat:hover {
+    background-color: white;
     color: var(--primary-color);
-    margin: 15px;
-    grid-column: 1/4;
-    grid-template-columns: repeat(3,1fr);
-    justify-items: center;
-    align-items: center;
+    border: 1px solid var(--primary-color);
 }
 
-.history img {
-    width: 80%;
-    height: auto;
+#start-chat:active {
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+}
+
+ .text-artcl a:visited{
+    color: white;
+}
+
+.sales-artcl a:visited{
+    color: var(--primary-color);
+}
+
+/* section 2 - Headquarters */
+.headquarters {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+    background-color: var(--nav-background-color);
+    margin-top: 30px;
+}
+
+.contact{
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: repeat(5, .7fr) 2fr;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: var(--paragraph-font);
+    color: white;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin: 20px 0 35px 0;
+}
+
+.social-media-icons, .ways-to-contact {
+    display: inline-flex;
+    gap: 20px;
+    margin: 0 10px;
+    padding-left: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+/* styling and giving a size to all the icons under the contacts section */
+.ways-to-contact img, .social-media-icons img {
+    width: 45px;
+    height: 40px;
+}
+
+.map {
     grid-column: 2/3;
-
-
+    width: 95%;
+    height: 95%;
+    box-sizing: border-box;
+    justify-self: center;
+    align-self: center;
+    margin: 10px;
 }
 
-/*Adventure*/
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    box-sizing: border-box;
+}
 
-.adventures {
-    /* this covers the entire "adventures" section */
+/* Section 3 - Meet our leadership */
+
+.leadership{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 13em 1fr;
+    border: 1px solid black;
+    justify-items: center;
+}
+
+.leadership h2 {
+    font-size: 4em;
+    grid-column: 1/4;
+}
+
+.leadership img {
+    width: 15em;
+    height: auto;
+    align-items: center;
+}
+
+.leaders {
+    text-align: center;
+    font-weight: bold;
+    display: grid;
+    grid-template-rows: 1fr 3em;
+    align-items: center;
+    font-family: var(--paragraph-font);
+}
+
+
+
+#david-thompson {
+    grid-column: 1/2;
+    
+}
+#jessica-collins {
+    grid-column: 2/3;
+}
+#michael-ramirez {
+    grid-column: 3/4;
+}
+
+/* section 4 - form-section */
+.form-section {
+    background-color: var(--nav-background-color);
+    color: white;
+    padding: 2em 0;
+}
+
+.form-section h2, .form-section p {
+    text-align: center;
+}
+
+label, input, textarea, button {
+    font-family: var(--paragraph-font);
+    font-size:medium;
+}
+
+input, textarea, button {
+    border-radius: .5em;
+    border: 1px solid black;
+}
+
+form{
+    display: grid;
+    grid-template-rows: 1fr 30px;
+    margin: auto 0;
+    padding: 0;
+    justify-content: center;
+}
+
+fieldset {
+    border: transparent;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 4em 7em 1fr 3em ;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    height: auto;
+    column-gap: 2rem;
+    margin: 20px 0;
+    padding: 0;
+}
+
+
+.name-field, .email-field {
+    grid-row: 1/2;
+    margin: 0 10px;
+    padding: 0;
+    display: grid;
+    grid-template-rows: repeat(2, 30px);
+    width: 18em;
+}
+
+
+.purpose-field{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-rows: 3em 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    font-size: medium;
     justify-items: center;
     align-items: center;
 }
 
-.adventures figure {
-    /* dividing figure into 2 rows and placing as many columns as possible */
-    display: grid;
-    grid-template-rows: 1fr 10px;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    justify-items: right;
-    align-items: center;
-}
-
-figure figcaption {
-    /* placing the captions below the images */
-    grid-row: 2/3; 
-    justify-self: center;
-}
-
-.adventures h2 {
-    /* placing the h2 in the middle on top of the image */
-    grid-column: 1/6;
-    grid-row: 1 ;
-    justify-self: center;
-    border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-}
-
-figure img {
-    /* styling the images */
-    max-width: 200px;
-    height: auto;
+.purpose-field p{
     grid-row: 1/2;
-    margin: 10px;
+    grid-column: 1/2;
+    justify-self: start;
+    padding-left: .4em;
+}
+
+
+.radio-options {
+    grid-row: 2/3;
+
+}
+
+.message-field {
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+
+.subscribe-field {
+    grid-row: 4/5;
+    grid-column: 1/3;
+}
+
+.message-field{
+    display: grid;
+    grid-template-rows: 2em 1fr;
+    width: 97%;
+    height: auto;
+}
+
+.message-field textarea {
+    resize: none;
+    height: 10em;
+
+}
+
+.subscribe-field{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    margin: 2em .5em;
+    gap: 10px;
+}
+
+.subscribe-field label{
+    order: 2;
+
+}
+
+button{
+    width: 10rem;
+    justify-self: center;
+}
+
+/* Hovers, activations and more... */
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    border: 1px solid var(--accent1-color);
+}
+
+button:active {
+    background-color: var(--accent1-color);
+    border: 1px solid black;
+    color: black;
 }
 
 /*FOOTER*/
@@ -232,3 +448,4 @@ footer p {
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
+

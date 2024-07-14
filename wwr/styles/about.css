@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+:root {
+    --primary-color: #004052;
+    --secondary-color: #3FA7D6;
+    --accent1-color: #FFFFFF;
+    --accent2-color: #28B715;
+
+    --heading-font: 'Raleway', sans-serif;
+    --paragraph-font: 'Montserrat', sans-serif;
+
+    --nav-background-color: #004052;
+    --nav-link-color: #FFFFFF;
+    --nav-hover-link-color: #e7ebda;
+    --nav-hover-background-color: #012029;
+}
+/*HEADER*/
+header {
+    display: grid;
+    max-width: 100%;
+    background-color: var(--primary-color);
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center; /*To horizontally center the items*/
+    align-items: center; /*To vertically center the items*/
+    margin: 0 auto; /*To center the div*/
+    grid-auto-rows: minmax(125px, auto);
+
+}
+
+.hero {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+#navigation-bar {
+    margin: 5px;
+    grid-column: 2/4;
+    grid-auto-rows: minmax(10px, auto);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navigation-bar li {
+    flex: 1 1 100%;
+
+}
+
+#navigation-bar a {
+    color: var(--nav-background-color);
+    width: 9em;
+    padding: 1px 10px;
+    border: 1px solid black;
+    font-family: var(--paragraph-font);
+    background-color: var(--accent1-color);
+    text-align: center;
+    
+}
+
+.logo {
+    max-width: 7.5em;
+    height: auto;
+}
+
+/*BODY*/
+/*Hero*/
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin: 15px;
+}
+
+h1{
+    position: absolute;
+    top: 30px;
+    left: 35%;
+    background-color: var(--accent1-color);
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.bgimg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+article img {
+    float: right;
+    width: 200px;
+    height: auto;
+    margin: 10px
+}
+
+article p{
+    color: var(--accent1-color);
+}
+
+article {
+    position: absolute;
+    background-color: rgba(225, 146, 0, 0.6);
+    top: 45%;
+    left: 30px;
+    width: 90%;
+    height: auto;
+    font-size: medium;
+
+}
+
+
+/*History*/
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    margin: 10px 0;
+}
+
+.history h2 {
+    align-self: center;
+    justify-self: center;
+    grid-column: 2/3;
+    margin-top: 1em;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.history p {
+    display: grid;
+    font-family: var(--paragraph-font);
+    color: var(--primary-color);
+    margin: 15px;
+    grid-column: 1/4;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.history img {
+    width: 80%;
+    height: auto;
+    grid-column: 2/3;
+
+
+}
+
+/*Adventure*/
+
+.adventures {
+    /* this covers the entire "adventures" section */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.adventures figure {
+    /* dividing figure into 2 rows and placing as many columns as possible */
+    display: grid;
+    grid-template-rows: 1fr 10px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    justify-items: right;
+    align-items: center;
+}
+
+figure figcaption {
+    /* placing the captions below the images */
+    grid-row: 2/3; 
+    justify-self: center;
+}
+
+.adventures h2 {
+    /* placing the h2 in the middle on top of the image */
+    grid-column: 1/6;
+    grid-row: 1 ;
+    justify-self: center;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+figure img {
+    /* styling the images */
+    max-width: 200px;
+    height: auto;
+    grid-row: 1/2;
+    margin: 10px;
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 4em;
+    border-top: 1px solid var(--primary-color);
+    margin-top: 10px;
+}
+
+footer p {
+    /* the copyright text */
+    text-align: center;
+    margin: 0;
+    flex: 1;
+}
+
+.navigation-bar-bottom {
+    /* the nav that contains the three links */
+    display: flex;
+    gap: 10px;
+    
+}
+
+.navigation-bar-bottom a img { 
+    /* The links */
+    width: 20px;
+    height: auto;
+}
+
+/* Removing the underline from the img link */
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
