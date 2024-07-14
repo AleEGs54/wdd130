@@ -23,7 +23,7 @@
 /*HEADER*/
 header {
     display: grid;
-    max-width: 80%;
+    max-width: 100%;
     background-color: var(--primary-color);
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center; /*To horizontally center the items*/
@@ -39,6 +39,7 @@ header {
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 
@@ -58,8 +59,8 @@ header {
 #navigation-bar a {
     color: var(--nav-background-color);
     width: 9em;
-    padding: 2px 10px;
-    border: 2px solid black;
+    padding: 1px 10px;
+    border: 1px solid black;
     font-family: var(--paragraph-font);
     background-color: var(--accent1-color);
     text-align: center;
@@ -203,7 +204,8 @@ footer {
     align-items: center;
     padding: 10px;
     height: 4em;
-    border-top: 2px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    margin-top: 10px;
 }
 
 footer p {
