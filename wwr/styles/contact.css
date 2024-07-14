@@ -201,16 +201,14 @@ hr {
 
 .social-media-icons, .ways-to-contact {
     display: inline-flex;
+    gap: 20px;
     margin: 0 10px;
     padding-left: 50px;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.ways-to-contact p {
-    margin-left: 15px;
 
-}
 
 iframe {
     width: 100%;
