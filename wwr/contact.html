@@ -68,40 +68,48 @@
             </strong></span>
         </section>
         <section class="form-section">
+            <h2>Send Us a Message</h2>
+            <p>Send us a message a we'll respond within 24 hours.</p>
+                    
             <form>
                 <fieldset>
-                    <h2>Send Us a Message</h2>
-                    <p>Send us a message a we'll respond within 24 hours.</p>
                     
-                    <div>
+                    <div class="name-field">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name">
+                        <input type="text" id="name" name="name" placeholder="Your Name">
                     </div>
-                    <div>
+                    <div class="email-field">
                         <label for="email">Email</label>
-                        <input type="text" id="email" name="email">
+                        <input type="text" id="email" name="email" placeholder="Your E-mail">
                     </div>
-                    <div>
+                    <div class="purpose-field">
                         <p>Purpose</p>
 
-                        <input type="radio" id="general" name="purpose" value="general-inquiry">
-                        <label for="general">General Inquiry</label>
+                        <span class="radio-options">
+                            <input type="radio" id="general" name="purpose" value="general-inquiry">
+                            <label for="general">General Inquiry</label>
+                        </span>
+                        
+                        <span class="radio-options">
+                            <input type="radio" id="reservation" name="purpose" value="reservation-question">
+                            <label for="reservation">Reservation Question</label>
+                        </span>
 
-                        <input type="radio" id="reservation" name="purpose" value="reservation-question">
-                        <label for="reservation">Reservation Question</label>
-
-                        <input type="radio" id="suggestions" name="purpose" value="website-suggestion">
-                        <label for="suggestions">Website Suggestion</label>
+                        <span class="radio-options">
+                            <input type="radio" id="suggestions" name="purpose" value="website-suggestion">
+                            <label for="suggestions">Website Suggestion</label>
+                        </span>
                     </div>
-                    <div>
+                    <div class="message-field">
                         <label for="message">Message</label>
                         <textarea name="message" id="message"></textarea>
                     </div>
-                    <div>
+                    <div class="subscribe-field">
                         <label for="subscribe">Please subscribe me to the monthly newsletter</label>
                         <input type="checkbox" name="subscribe" id="subscribe"></textarea>
                     </div>
                 </fieldset>
+                <button>Send</button>
             </form>
         </section>
     </main>
