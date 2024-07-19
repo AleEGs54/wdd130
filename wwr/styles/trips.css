@@ -266,7 +266,7 @@ h2 {
     grid-template-rows: 1fr 1fr;
     gap: 20px;
     /* this gap separates the buttons and the information boxes */
-    padding-left: 20px;
+    padding-left: 100px;
     margin: 15px
 
 }
