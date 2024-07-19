@@ -30,6 +30,7 @@ header {
     align-items: center; /*To vertically center the items*/
     margin: 0 auto; /*To center the div*/
     grid-auto-rows: minmax(125px, auto);
+    
 
 
 }
@@ -74,11 +75,15 @@ header {
 
 /*BODY*/
 
+body {
+    overflow-x: hidden;
+}
+
 .wrap-main {
     /* father grid | Body's son */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows: repeat(5,1fr);
     position: relative;
 }
 
@@ -149,15 +154,16 @@ h1 {
     font-family: var(--paragraph-font);
     background-color: var(--primary-color);
     padding: 10px;
-    font-size: large;
     border-radius: 1em;
     text-align: center;
+    font-size: large;
 
 }
 /* action and hover for .lets-go-button */
 .lets-go-button:hover {
     color: var(--primary-color);
     background-color: var(--accent1-color);
+    font-weight: bold;
 }
 .lets-go-button:active {
     color: var(--accent1-color);
@@ -173,7 +179,7 @@ h1 {
     /* .wrap-main son's grid  */
     grid-row: 3/7;
     grid-column: 1/13;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: var(--primary-color);
     width: 100%;
     display: grid;
@@ -184,41 +190,57 @@ h1 {
 /* Article */
 .travelers-choice {
     /* .trips-details-main-content son's grid */
-    background-color: #3FA7D6;
+    background-color: var(--nav-hover-background-color);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    border-radius: 0 1em 0 0;
 }
+
+.wrap-h2-travelers-choice {
+    /* only positioning */
+    align-self: center;
+}
+
+/* .h2-travelers-choice{
+    /* only styling */
+    /* nothing here for now */
 
 .trip-travelers-choice{
     /* .travelers-choice son's flex */
     width: 90%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background-color: var(--accent1-color);
+    border-radius: 1em;
     /* since the flex is a column, justify and align are inverted */
     align-self: center;
-    margin: 0;
-    padding: 10px;
+    margin: 10px 0;
+    /* padding: 10px; */
     text-align: center;
 
 }
 
 .trip-travelers-choice img {
-    width: 80%;
+    width: 100%;
+    max-height: 15em;
+    border-radius: 1em 1em 0 0;
 }
+
 /* end article */
 /* section */
+
 .trips-main-information {
     /* .trips-details-main-content son's grid */
-    background-color: aquamarine;
-    display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: repeat(5, 20%);
+    /* background-color: rgb(224, 32, 32); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     
 }
 
 .wrap-h2 {
     /* Only positioning */
-    justify-self: end;
+    justify-self: start;
     align-self: center;
     background-color: var(--primary-color);
     
@@ -234,17 +256,98 @@ h2 {
 }
 
 .newest-trips {
-    border: 1px solid black;
-    width: 60%;
+    /* .trips-main-information son's flex */
+    /* border: 1px solid black; */
+    width: 100%;
+    max-height: 300px;
+    height: 20%;
+    display: grid;
+    grid-template-columns: 75% 25% ;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    /* this gap separates the buttons and the information boxes */
+    padding-left: 20px;
+    margin: 15px
+
+}
+
+.newest-trips figure {
+    width: 100%;
+    height: auto;
+    grid-row: 1/3;
     grid-column: 1/2;
-    justify-self: center;
-    margin: 15px;
+    justify-self: end;
+    align-self: center;
+    border-radius: 1em;
+    /* border: 2px solid black; */
+    background-color: #e7ebda;
     
 }
 
 .newest-trips img {
-    width: 80%;
+    width: 60%;
     height: auto;
+    max-height: 300px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 1em 0 0 1em;
+}
+
+figure h3 {
+    margin: 15px;
+    text-align: center;
+    font-family: var(--heading-font);
+}
+
+figure figcaption{
+    margin: 15px 15px 0 15px;
+    padding: 10px 0;
+    text-align: justify;
+    font-family: var(--paragraph-font);
+    
+}
+
+
+.book-now-link {
+    /* only positioning */
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: start;
+    align-self: end;
+}
+
+.view-link {
+    /* only positioning */
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: start;
+    align-self: start;
+}
+
+
+.book-now-link div, .view-link div {
+    /* only styling for the book now and view buttons*/
+    color: var(--accent1-color);
+    font-family: var(--paragraph-font);
+    background-color: var(--nav-hover-background-color);
+    padding: 10px;
+    border-radius: 1em;
+    min-width: 120px;
+    max-height: 50px;
+    text-align: center;
+    
+}
+
+/* hover, activations for book now and view */
+.book-now-link div:hover, .view-link div:hover {
+    color: var(--primary-color);
+    background-color: var(--accent1-color);
+    font-weight: bold;
+}
+
+.book-now-link div:active, .view-link div:active {
+    color: var(--accent1-color);
+    background-color: var(--primary-color);
 }
 
 /* end section */
