@@ -353,12 +353,13 @@ figure figcaption{
 /* end section */
 /*FOOTER*/
 footer {
+    font-family: var(--paragraph-font);
     display: flex;
     align-items: center;
     padding: 10px;
     height: 4em;
     border-top: 1px solid var(--primary-color);
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 footer p {
