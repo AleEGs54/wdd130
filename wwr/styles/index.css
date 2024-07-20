@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #004052;
+    --secondary-color: #3FA7D6;
+    --accent1-color: #FFFFFF;
+    --accent2-color: #28B715;
+
+    --heading-font: 'Raleway', sans-serif;
+    --paragraph-font: 'Montserrat', sans-serif;
+
+    --nav-background-color: #004052;
+    --nav-link-color: #FFFFFF;
+    --nav-hover-link-color: #e7ebda;
+    --nav-hover-background-color: #012029;
+}
+/*HEADER*/
+header {
+    display: grid;
+    max-width: 100%;
+    background-color: var(--primary-color);
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center; /*To horizontally center the items*/
+    align-items: center; /*To vertically center the items*/
+    margin: 0 auto; /*To center the div*/
+    grid-auto-rows: minmax(125px, auto);
+    
+
+
+}
+
+.hero {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#navigation-bar {
+    margin: 5px;
+    grid-column: 2/4;
+    grid-auto-rows: minmax(10px, auto);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navigation-bar li {
+    flex: 1 1 100%;
+
+}
+
+#navigation-bar a {
+    color: var(--nav-background-color);
+    width: 9em;
+    padding: 1px 10px;
+    border: 1px solid black;
+    font-family: var(--paragraph-font);
+    background-color: var(--accent1-color);
+    text-align: center;
+
+}
+
+.logo {
+    max-width: 7.5em;
+    height: auto;
+}
+
+/*BODY*/
+
+body {
+    overflow-x: hidden;
+}
+
+.wrap-main {
+    /* father grid | Body's son */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    position: relative;
+}
+
+/*FOOTER*/
+footer {
+    font-family: var(--paragraph-font);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 4em;
+    border-top: 1px solid var(--primary-color);
+    /* margin-top: 10px; */
+}
+
+footer p {
+    /* the copyright text */
+    text-align: center;
+    margin: 0;
+    flex: 1;
+}
+
+.navigation-bar-bottom {
+    /* the nav that contains the three links */
+    display: flex;
+    gap: 10px;
+
+}
+
+.navigation-bar-bottom a img {
+    /* The links */
+    width: 20px;
+    height: auto;
+}
+
+/* Removing the underline from the img link */
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
