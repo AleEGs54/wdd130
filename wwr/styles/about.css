@@ -86,6 +86,10 @@ h1, h2 {
     margin: 15px;
 }
 
+p, figcaption {
+    font-family: var(--paragraph-font);
+}
+
 h1{
     position: absolute;
     top: 30px;
@@ -111,6 +115,7 @@ article img {
 
 article p{
     color: var(--accent1-color);
+    margin: 10px;
 }
 
 article {
