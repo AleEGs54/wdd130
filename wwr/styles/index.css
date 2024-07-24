@@ -90,7 +90,7 @@ h3, h4 {
 
 div p, figcaption, label {
     font-family: var(--paragraph-font);
-    font-size: 1.2em;
+    font-size: 1.15em;
 }
 
 .wrap-main {
