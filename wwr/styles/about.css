@@ -106,19 +106,19 @@ h1{
 }
 
 
-article img {
+.introductory-paragraph img {
     float: right;
     width: 200px;
     height: auto;
     margin: 10px
 }
 
-article p{
+.introductory-paragraph p{
     color: var(--accent1-color);
     margin: 10px;
 }
 
-article {
+.introductory-paragraph {
     position: absolute;
     background-color: rgba(225, 146, 0, 0.6);
     top: 45%;
