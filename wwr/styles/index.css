@@ -88,9 +88,9 @@ h3, h4 {
     color: var(--primary-color);
 }
 
-p, figcaption {
+p, figcaption, label {
     font-family: var(--paragraph-font);
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .wrap-main {
@@ -253,10 +253,15 @@ fieldset {
     justify-content: center;
     height: 20em;
     width: 20em;
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 10px;
     border: 2px solid gray;
     margin: 0 auto 0;
     
+}
+
+label {
+    margin-top: 10px;
 }
 
 input[type="text"],
@@ -264,7 +269,7 @@ input[type="email"] {
     
     margin: 0;
     padding: 5px;
-    border: 2px solid grey;
+    border: 3px solid grey;
     border-radius: .4em;
     font-size: 1em;
     height: 2.5em;
@@ -280,6 +285,12 @@ button {
     color: var(--accent1-color);
     border-radius: .5em;
     font-family: var(--paragraph-font);
+}
+
+button:hover {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 form p{
