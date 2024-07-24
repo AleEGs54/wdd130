@@ -80,13 +80,17 @@ body {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: var(--heading-font);
+}
+
+h3, h4 {
+    color: var(--primary-color);
 }
 
 p, figcaption {
     font-family: var(--paragraph-font);
-    font-size: medium;
+    font-size: 1.1em;
 }
 
 .wrap-main {
@@ -350,7 +354,8 @@ h3 {
 
     display: grid;
 
-    grid-template-rows: repeat(2,1fr);
+    /* Dont allow the heigh to be taller than expected */
+    grid-template-rows: repeat(2,auto);
     grid-template-columns: repeat(2,1fr);
     gap: 10px;
 }
@@ -363,6 +368,39 @@ h3 {
 .trip-overview-figure figcaption {
     justify-self: center;
     grid-column: 1/3;
+}
+
+
+#pic-1, #pic-2 {
+    /* this pictures are shorther than i thought */
+    align-self: end;
+}
+
+#pic-4{
+    /* only for this pic that is smaller than expected */
+    height: 100%;
+}
+
+/* trip-information-section */
+
+.trip-information-section {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    text-align: left;
+}
+
+.trip-information-content h3,
+ .trip-information-content h4,
+  .trip-information-content p {
+
+    padding: 10px;
+}
+
+.accomodation-options p a {
+    text-decoration:underline;
+    color: #fbbd04;
 }
 
 /*FOOTER*/
