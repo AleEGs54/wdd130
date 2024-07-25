@@ -97,7 +97,7 @@ div p, figcaption, label {
     /* father grid | Body's son */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
     position: relative;
 }
 
@@ -106,7 +106,7 @@ div p, figcaption, label {
 .call-to-action-div {
     /* .wrap-main son grid */
     grid-column: 1/13;
-    grid-row: 1/3;
+    grid-row: 1/2;
     height: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -219,7 +219,7 @@ h1 {
     /* wrap-main son grid */
     display: grid;
     grid-column: 1/13;
-    grid-row: 3/6;
+    grid-row: 2/5;
     grid-template-columns: 65% 35%;
     /* grid-template-rows: repeat(3, 1fr); */
 }
